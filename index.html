@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questionnaire</title>
+    <style>
+        /* Style pour le conteneur des sections */
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Style pour chaque section */
+        .section {
+            flex: 1;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        /* Style pour le tableau */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left; /* Alignement à gauche pour la colonne sans titre */
+            font-family: 'Verdana', sans-serif; /* Changer la police d'écriture */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Couleur de fond pour l'en-tête */
+        }
+
+        /* Style pour les ronds de couleur */
+        .color-circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            cursor: pointer;
+            opacity: 0.7; /* Opacité par défaut pour les ronds non sélectionnés */
+            border: 2px solid transparent;
+        }
+
+        .violet { background-color: #DA70D6; }
+        .vert { background-color: #90EE90; }
+        .orange { background-color: #FFA500; }
+        .rouge { background-color: #FF6347; }
+
+        /* Style pour la légende */
+        .legend {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
+    </style>
+
+    <!-- DEBUT MOT SURVOLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Styles pour l'encart */
+  .encart {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<p>Survolez ce <span class="mot-interessant">mot</span> pour plus d'informations.</p>
+
+<!-- L'encart -->
+<div class="encart" id="encartInfo">
+  Informations supplémentaires sur le mot.
+</div>
+
+<script>
+// JavaScript pour gérer l'affichage de l'encart
+const motInteressant = document.querySelector('.mot-interessant');
+const encartInfo = document.getElementById('encartInfo');
+
+motInteressant.addEventListener('mouseover', () => {
+  encartInfo.style.display = 'block';
+});
+
+motInteressant.addEventListener('mouseout', () => {
+  encartInfo.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
+
+
+    <!-- FIN MOT SURVOLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
+
+ <!-- ESSSSSSSSSSSSSSSSSSSSSAIIIIIIIIII -->
+
+
+ <!-- ESSSSSSSSSSSSSSSSSSSSSAIIIIIIIIII -->
+
+
+</head>
+<body>
+    <h1>Mon profil BDSM</h1>
+
+    <!-- Légende des couleurs -->
+    <div class="legend">
+        <span class="color-circle violet"></span> J'adore ♡
+        <span class="color-circle vert"></span> J'aime bien
+        <span class="color-circle orange"></span> J'accepte / Peut-être
+        <span class="color-circle rouge"></span> Je n'aime pas / Je n'accepte pas
+    </div>
+
+    <!-- Conteneur des sections -->
+    <div class="sections">
+        <!-- Section "Cadeaux" avec tableau -->
+        <section class="section">
+            <h2>Tenues et habitudes</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th>J'aime porter / pratiquer...</th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Ours en peluche -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Culotte</td>
+
+                </tr>
+                <!-- Réponse 2 : Carte postale -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>String</td>
+
+                </tr>
+                <!-- Réponse 3 : Livre pédagogique -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td class="infobulle">Tanga</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Cuir</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Couches / tétines (DDLG)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Uniformes / cosplay</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Epilation partielle</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Epilation intégrale</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Soutien-gorge</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Latex</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Corsets</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Leggings</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Body</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>No-bra (seins nus)</td>
+                </tr>
+            </table>
+        </section>
+
+
+
+        <!-- Section "Sujets de lecture" avec tableau similaire -->
+        <section class="section">
+            <h2>Orientations & Configurations</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Actualité -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Moi + 1 homme</td>
+                </tr>
+                <!-- Réponse 2 : Amour -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Moi + 1 femme</td>
+                </tr>
+                <!-- Réponse 3 : Romans policiers -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Aventure à 3 (HHF)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Aventure à 3 (FFH)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Orgie</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Sex-tapes</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Gangbang</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Bukkake</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Observer des gens faire l'amour</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Être observé.e pendant l'acte</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Glory Hole</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Aller en club libertin</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Échangisme</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Hotwife</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <!-- Section "Plats préférés" avec tableau similaire -->
+        <section class="section" style="flex: 1; text-align: center;">
+            <h2>Mes pratiques kinky</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Lasagnes -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Pénétration vaginale</td>
+                </tr>
+                <!-- Réponse 2 : Potimarron -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Pénétration anale</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Se faire baiser la bouche</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Gorge profonde (contrôlée)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Gorge profonde (no limit)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Se faire pincer / mordre les tétons</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Fisting</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Face-sitting</td>
+                </tr>
+                <!-- Réponse 3 : Pizza -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Qu'on éjacule en moi</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Pet-play</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>DDLG (Daddy / Little girl)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Sexe en public</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Jeux de rôles (prof / élève, etc)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Être privée de mes sens</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <div class="sections">
+        <!-- Section "Cadeaux" avec tableau -->
+        <section class="section">
+            <h2>Mes rencontres</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Ours en peluche -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Avoir un partenaire exclusif (love)</td>
+                </tr>
+                <!-- Réponse 2 : Carte postale -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Avoir un partenaire exclusif (SF)</td>
+                </tr>
+                <!-- Réponse 3 : Livre pédagogique -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Plusieurs partenaires à la fois</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>1st date : lieu public #sécurité</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>1st date : chez lui #excitation</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Voir la personne 1 fois (one-shot)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Voir la personne régulièrement</td>
+                </tr>
+            </table>
+        </section>
+
+
+
+        <!-- Section "Sujets de lecture" avec tableau similaire -->
+        <section class="section">
+            <h2>Positions : mes coups de coeur</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Actualité -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Missionnaire</td>
+                </tr>
+                <!-- Réponse 2 : Amour -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Levrette</td>
+                </tr>
+                <!-- Réponse 3 : Romans policiers -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Cuillère</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Andromaque</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>69</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Bateau ivre (jambes en l'air)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Debout</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section "Plats préférés" avec tableau similaire -->
+        <section class="section" style="flex: 1; text-align: center;">
+            <h2>Être stimulée</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th>J'aime recevoir</th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Lasagnes -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Des caresses / des massages</td>
+                </tr>
+                <!-- Réponse 2 : Potimarron -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Masturbation (clitoris)</td>
+                </tr>
+                <!-- Réponse 3 : Pizza -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Masturbation (vagin)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Cunnilingus</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Anulingus</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Tantra</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Chatouilles</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+       <div class="sections">
+        <!-- Section "Cadeaux" avec tableau -->
+        <section class="section">
+            <h2>Stimuler mon partenaire</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th>J'aime donner</th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Ours en peluche -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Caresses</td>
+                </tr>
+                <!-- Réponse 2 : Carte postale -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Massages</td>
+                </tr>
+                <!-- Réponse 3 : Livre pédagogique -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Fellation</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Anulingus</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Pegging (pénétration anale)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Masturbation</td>
+                </tr>
+            </table>
+        </section>
+
+
+
+        <!-- Section "Sujets de lecture" avec tableau similaire -->
+        <section class="section">
+            <h2>Les sextoys et moi</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Actualité -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Godemichet</td>
+                </tr>
+                <!-- Réponse 2 : Amour -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Vibromasseur</td>
+                </tr>
+                <!-- Réponse 3 : Romans policiers -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Womanizer</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Plug anal</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Sextoys connectés</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section "Plats préférés" avec tableau similaire -->
+        <section class="section" style="flex: 1; text-align: center;">
+            <h2>CNC (non-consentement consenti)</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Lasagnes -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Rape play : simulation de viol</td>
+                </tr>
+                <!-- Réponse 2 : Potimarron -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Kidnapping</td>
+                </tr>
+                <!-- Réponse 3 : Pizza -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Être chassée comme une proie</td>
+                </tr>
+                 <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Être abusée quand je suis ivre</td>
+                </tr>
+                 <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Pénétration pendant mon sommeil</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+     </div>
+       <div class="sections">
+        <!-- Section "Cadeaux" avec tableau -->
+        <section class="section">
+            <h2>Mon profil de soumission</h2>
+            <table>
+                <tr>
+                    <th>Recevoir</th>
+                    <th>J'aime...</th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Ours en peluche -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être docile et obéissante (sub)</td>
+                </tr>
+                <!-- Réponse 2 : Carte postale -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être rebelle, sale gosse (brat)</td>
+                </tr>
+                <!-- Réponse 3 : Livre pédagogique -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Tutoyer mon partenaire</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Vouvoyer mon partenaire</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Qu'on me donne des ordres</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être soumise juste au lit</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être soumise dans la vie</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Alternance BDSM <> sexe vanille</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être sa chose, son jouet sexuel</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Mon plaisir avant tout</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Son plaisir avant tout</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être éduquée / la discipline</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Servir un Maître au quotidien</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Faire la cuisine et le ménage</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être attachée</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être bâillonnée</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'cadeaux')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'cadeaux')"></div>
+                    </td>
+                    <td>Être suspendue par des cordes</td>
+                </tr>
+            </table>
+        </section>
+
+
+
+        <!-- Section "Sujets de lecture" avec tableau similaire -->
+        <section class="section">
+            <h2>Degradation & Humiliation</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Actualité -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Être souillée, humiliée</td>
+                </tr>
+                <!-- Réponse 2 : Amour -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Être utilisée, n'importe quand</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Être étranglée (doucement)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Être étranglée (très fermement)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Se faire insulter au lit</td>
+                </tr>
+                </tr>
+                <!-- Réponse 3 : Romans policiers -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Éjaculation faciale</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Ej. dans ma bouche (sans avaler)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Ej. dans ma bouche (avaler)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Me faire cracher dessus (visage)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Me faire cracher dessus (bouche)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Lécher les pieds de mon Maître</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Lécher le sperme sur le sol</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Uro (corps)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Uro (bouche)</td>
+                </tr><tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Uro (avaler)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Avaler le contenu du préservatif</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Être promenée en laisse</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <!-- Section "Plats préférés" avec tableau similaire -->
+        <section class="section" style="flex: 1; text-align: center;">
+            <h2>Douleur & Bondage</h2>
+            <table>
+                <tr>
+                    <th>Choix</th>
+                    <th></th> <!-- Troisième colonne sans titre -->
+                </tr>
+                <!-- Réponse 1 : Lasagnes -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Fessées : Douleur légère</td>
+                </tr>
+                <!-- Réponse 2 : Potimarron -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Fessées : Douleur intense</td>
+                </tr>
+                <!-- Réponse 3 : Pizza -->
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'plats')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'plats')"></div>
+                    </td>
+                    <td>Cheveux tirés</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Aiguilles / sang (blood-play)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Martinet / Cravache / Fouet</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Marques (durée : qq heures)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Marques (durée : qq jours)</td>
+                </tr><tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Gifles légères</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Gifles puissantes</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Cire & bougies</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Electrical play</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Griffures (recevoir)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Morsures (recevoir)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Menottes</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Sangles lit (poignets & chevilles)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Cordes (Shibari)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="color-circle violet" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle vert" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle orange" onclick="selectColor(this, 'lecture')"></div>
+                        <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
+                    </td>
+                    <td>Scotch BDSM (bondage tape)</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <!-- JavaScript pour la sélection des couleurs -->
+    <script>
+        // Fonction pour sélectionner ou désélectionner un rond de couleur par ligne
+        function selectColor(element, section) {
+            // Désélectionner tous les ronds de couleur de la même ligne
+            const row = element.parentElement.parentElement;
+            const colorCircles = row.querySelectorAll('.color-circle');
+            colorCircles.forEach(circle => {
+                circle.style.border = '2px solid transparent';
+            });
+
+            // Sélectionner ou désélectionner le rond
+            if (element.style.border === '2px solid transparent') {
+                element.style.border = '2px solid black';
+            } else {
+                element.style.border = '2px solid transparent';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- FIN DU SQUELETTE -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ... Vos métadonnées et styles ici ... -->
+</head>
+<body>
+    <h1></h1>
+    <!-- Div pour regrouper les six sections ... -->
+
+    <!-- Bouton Exporter -->
+    <button id="export-button">Exporter</button>
+
+    <!-- Script JavaScript pour gérer l'export -->
+    <script>
+        // Fonction JavaScript pour gérer l'export
+        function exporterQuestionnaire() {
+            // Vous pouvez ajouter ici le code d'export de vos réponses
+            alert('Export en cours...'); // Exemple d'alerte, remplacez par votre code d'export
+        }
+
+        // Ajout d'un gestionnaire d'événement au bouton
+        document.getElementById('export-button').addEventListener('click', exporterQuestionnaire);
+    </script>
+</body>
+</html>
