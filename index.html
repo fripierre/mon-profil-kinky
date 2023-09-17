@@ -12,6 +12,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="dom-to-image.js"></script>
+    <script src =dom-to-image.min.js></script>
     <title>Questionnaire</title>
     <style>
         /* Style pour le conteneur des sections */
@@ -72,57 +75,6 @@
     </style>
 
     <!-- DEBUT MOT SURVOLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-
-    <!DOCTYPE html>
-<html>
-<head>
-<style>
-  /* Styles pour l'encart */
-  .encart {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 1;
-  }
-</style>
-</head>
-<body>
-
-<p>Survolez ce <span class="mot-interessant">mot</span> pour plus d'informations.</p>
-
-<!-- L'encart -->
-<div class="encart" id="encartInfo">
-  Informations supplémentaires sur le mot.
-</div>
-
-<script>
-// JavaScript pour gérer l'affichage de l'encart
-const motInteressant = document.querySelector('.mot-interessant');
-const encartInfo = document.getElementById('encartInfo');
-
-motInteressant.addEventListener('mouseover', () => {
-  encartInfo.style.display = 'block';
-});
-
-motInteressant.addEventListener('mouseout', () => {
-  encartInfo.style.display = 'none';
-});
-</script>
-
-</body>
-</html>
-
-
-    <!-- FIN MOT SURVOLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-
- <!-- ESSSSSSSSSSSSSSSSSSSSSAIIIIIIIIII -->
-
-
- <!-- ESSSSSSSSSSSSSSSSSSSSSAIIIIIIIIII -->
 
 
 </head>
@@ -988,7 +940,6 @@ motInteressant.addEventListener('mouseout', () => {
             </table>
         </section>
     </div>
-     </div>
        <div class="sections">
         <!-- Section "Cadeaux" avec tableau -->
         <section class="section">
@@ -1213,7 +1164,6 @@ motInteressant.addEventListener('mouseout', () => {
                         <div class="color-circle rouge" onclick="selectColor(this, 'lecture')"></div>
                     </td>
                     <td>Se faire insulter au lit</td>
-                </tr>
                 </tr>
                 <!-- Réponse 3 : Romans policiers -->
                 <tr>
@@ -1513,35 +1463,48 @@ motInteressant.addEventListener('mouseout', () => {
             }
         }
     </script>
+
+<button id="exportButton">Exporter</button>
+<canvas id="exportCanvas"></canvas>
+
 </body>
+
+
+<script>
+
+
+document.getElementById('exportButton').addEventListener('click', function() {
+  // Obtenez le contenu de la page à capturer
+  const content = document.body;
+
+  // Options pour la capture d'écran
+  const options = {
+    width: content.clientWidth, // Largeur de la capture
+    height: content.clientHeight, // Hauteur de la capture
+    style: {
+      transform: 'scale(1)', // Désactive la mise à l'échelle pendant la capture
+    },
+  };
+
+  // Capturez le contenu de la page en une image
+  domtoimage.toPng(content, options)
+    .then(function (dataUrl) {
+      // Créez un lien pour télécharger l'image
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = 'exported-image.png';
+
+      // Cliquez sur le lien pour déclencher le téléchargement
+      link.click();
+    })
+    .catch(function (error) {
+      console.error('Erreur lors de la capture d\'écran :', error);
+    });
+});
+
+
+
+ </script>
+
 </html>
 
-
-
-<!-- FIN DU SQUELETTE -->
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <!-- ... Vos métadonnées et styles ici ... -->
-</head>
-<body>
-    <h1></h1>
-    <!-- Div pour regrouper les six sections ... -->
-
-    <!-- Bouton Exporter -->
-    <button id="export-button">Exporter</button>
-
-    <!-- Script JavaScript pour gérer l'export -->
-    <script>
-        // Fonction JavaScript pour gérer l'export
-        function exporterQuestionnaire() {
-            // Vous pouvez ajouter ici le code d'export de vos réponses
-            alert('Export en cours...'); // Exemple d'alerte, remplacez par votre code d'export
-        }
-
-        // Ajout d'un gestionnaire d'événement au bouton
-        document.getElementById('export-button').addEventListener('click', exporterQuestionnaire);
-    </script>
-</body>
-</html>
