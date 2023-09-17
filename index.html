@@ -13,6 +13,8 @@
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="dom-to-image.js"></script>
     <script src =dom-to-image.min.js></script>
     <title>Questionnaire</title>
@@ -70,6 +72,24 @@
             font-weight: bold;
             margin-top: 10px;
         }
+
+        #exportButton {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5em; /* Taille de police plus grande */
+  padding: 10px 20px; /* Rembourrage plus important */
+  border: none;
+  background-color: #6495ED; /* Couleur de fond bleue */
+  color: #fff; /* Texte blanc */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer;
+  font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+#exportButton:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
+
 
 
     </style>
@@ -1465,46 +1485,47 @@
     </script>
 
 <button id="exportButton">Exporter</button>
-<canvas id="exportCanvas"></canvas>
+
 
 </body>
 
 
+<!-- A SUIVRE : BOUTON TELECHARGEMENT DIRECT -->
 <script>
 
-
 document.getElementById('exportButton').addEventListener('click', function() {
-  // Obtenez le contenu de la page à capturer
-  const content = document.body;
+  // Demandez le pseudo de l'utilisateur
+  const userPseudo = window.prompt('Veuillez entrer le pseudo de votre choix :', 'MonPseudo');
 
-  // Options pour la capture d'écran
-  const options = {
-    width: content.clientWidth, // Largeur de la capture
-    height: content.clientHeight, // Hauteur de la capture
-    style: {
-      transform: 'scale(1)', // Désactive la mise à l'échelle pendant la capture
-    },
-  };
+  if (userPseudo !== null) {
+    // Sélectionnez l'élément que vous souhaitez capturer
+    const captureContainer = document.body;
 
-  // Capturez le contenu de la page en une image
-  domtoimage.toPng(content, options)
-    .then(function (dataUrl) {
-      // Créez un lien pour télécharger l'image
-      const link = document.createElement('a');
-      link.href = dataUrl;
-      link.download = 'exported-image.png';
+    // Capturez l'élément avec dom-to-image
+    domtoimage.toBlob(captureContainer, { bgcolor: 'white' })
+      .then(function(blob) {
+        // Créez un objet FormData pour inclure l'image dans la requête POST
+        const formData = new FormData();
+        const fileName = `${userPseudo}-profil-kinky.png`; // Nom de fichier basé sur le pseudo
+        formData.append('image', blob, fileName);
 
-      // Cliquez sur le lien pour déclencher le téléchargement
-      link.click();
-    })
-    .catch(function (error) {
-      console.error('Erreur lors de la capture d\'écran :', error);
-    });
+        // Créez un élément de lien pour télécharger l'image
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = fileName;
+
+        // Simulez un clic sur le lien pour déclencher le téléchargement
+        downloadLink.click();
+      })
+      .catch(function(error) {
+        console.error('Erreur lors de la capture de l\'image :', error);
+      });
+  }
 });
 
 
 
  </script>
-
+<!-- FIN : BOUTON TELECHARGEMENT DIRECT -->
 </html>
 
