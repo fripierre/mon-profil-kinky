@@ -2,26 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Profil Kinky</title>
+    <title>Profil Kinky</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-</head>
-<body>
 
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
+    <!-- Importation des bibliothèques nécessaires -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="dom-to-image.js"></script>
-    <script src =dom-to-image.min.js></script>
-    <title>Questionnaire</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1316.0.min.js"></script>
+
     <style>
-        /* Style pour le conteneur des sections */
+      /* Style pour le conteneur des sections */
         .sections {
             display: flex;
             flex-wrap: wrap;
@@ -81,32 +71,42 @@
             font-weight: bold;
             margin-top: 10px;
             
-        }
-
+        }  
+      /* Style du bouton vert */
         #exportButton {
-  display: block;
-  margin: 0 auto;
-  font-size: 1.5em; /* Taille de police plus grande */
-  padding: 10px 20px; /* Rembourrage plus important */
-  border: none;
-  background-color: #6495ED; /* Couleur de fond bleue */
-  color: #fff; /* Texte blanc */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer;
-  font-family: Arial, sans-serif; /* Police de caractères */
-}
-
-#exportButton:hover {
-  background-color: #0056b3; /* Couleur de fond au survol */
-}
-
-
-
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #exportButton:hover {
+            background-color: darkgreen;
+        }
+        /* Style du lien généré */
+        #generatedLink {
+            font-weight: bold;
+            color: blue;
+            text-decoration: underline;
+            margin-right: 10px;
+        }
+        #copyLinkButton {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #copyLinkButton:hover {
+            color: darkblue;
+        }
+        #linkContainer {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
     </style>
-
-    <!-- DEBUT MOT SURVOLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE -->
-
-
 </head>
 <body>
     <h1>Mon profil BDSM</h1>
@@ -1585,47 +1585,103 @@
         }
     </script>
 
-<button id="exportButton">Exporter</button>
+    <!-- Bouton de téléchargement -->
+    <div style="display: flex; align-items: center;">
+        <button id="exportButton">Télécharger</button>
+        <div id="linkContainer" style="display: none;">
+            <a id="generatedLink" target="_blank"></a>
+            <button id="copyLinkButton" title="Copier le lien">📋</button>
+        </div>
+    </div>
 
+    <script>
+        // Configuration AWS S3
+        AWS.config.update({
+            accessKeyId: 'AKIATNVEVHFB3ALGXBEL', // Remplacez par votre clé d'accès AWS
+            secretAccessKey: 'wJ9lEfK5I61gO6Tp9Tw7bo91GhC+vaNeJsHdspD4', // Remplacez par votre clé secrète AWS
+            region: 'eu-west-3' // Remplacez par votre région AWS (ex. eu-west-3 pour Paris)
+        });
 
+        const s3 = new AWS.S3();
+        const bucketName = 'mpk-fet'; // Remplacez par le nom de votre bucket
+
+        document.getElementById('exportButton').addEventListener('click', function () {
+            // Demandez le pseudo de l'utilisateur
+            const userPseudo = window.prompt('Veuillez entrer le pseudo de votre choix :', 'MonPseudo');
+
+            if (userPseudo !== null) {
+                // Sélectionnez l'élément du titre pour le modifier
+                const titleElement = document.querySelector('h1');
+                const originalTitle = titleElement.textContent; // Sauvegarder le texte original
+                titleElement.textContent = `Le profil Kinky de ${userPseudo}`; // Remplacez par le nouveau texte
+
+                // Attendre une seconde avant la capture
+                setTimeout(() => {
+                    const captureContainer = document.body;
+
+                    // Capturez l'élément avec dom-to-image
+                    domtoimage.toBlob(captureContainer, { bgcolor: 'white' })
+                        .then(function (blob) {
+                            console.log('Taille du fichier (octets) :', blob.size);
+
+                            // Générer un nom de fichier aléatoire (10 caractères)
+                            const randomString = Math.random().toString(36).substring(2, 12); // Génère 10 caractères aléatoires
+                            const fileName = `${randomString}-profil-kinky.png`;
+
+                            // Préparer les paramètres pour l'upload S3
+                            const params = {
+                                Bucket: bucketName,
+                                Key: fileName,
+                                Body: blob,
+                                ContentType: 'image/png'
+                            };
+
+                            // Uploader l'image dans le bucket S3
+                            s3.upload(params, function (err, data) {
+                                if (err) {
+                                    console.error('Erreur complète lors de l\'upload :', err);
+                                    alert('Une erreur est survenue lors de l\'upload vers S3 : ' + err.message);
+                                } else {
+                                    console.log('Image uploadée avec succès :', data);
+
+                                    // Générer le lien public
+                                    const publicUrl = data.Location;
+
+                                    // Afficher le lien à droite du bouton avec l'icône de copie
+                                    const linkField = document.getElementById('generatedLink');
+                                    linkField.textContent = publicUrl;
+                                    linkField.href = publicUrl;
+
+                                    // Rendre le conteneur visible
+                                    const linkContainer = document.getElementById('linkContainer');
+                                    linkContainer.style.display = 'flex';
+
+                                    // Rétablir le titre original après l'upload
+                                    titleElement.textContent = originalTitle;
+                                }
+                            });
+                        })
+                        .catch(function (error) {
+                            console.error('Erreur lors de la capture de l\'image :', error);
+                            alert('Une erreur est survenue lors de la capture de l\'image.');
+
+                            // Rétablir le titre original en cas d'erreur
+                            titleElement.textContent = originalTitle;
+                        });
+                }, 1000); // Attendre 1 seconde avant de capturer
+            }
+        });
+
+        // Fonction pour copier le lien
+        document.getElementById('copyLinkButton').addEventListener('click', function () {
+            const linkField = document.getElementById('generatedLink');
+            navigator.clipboard.writeText(linkField.href).then(() => {
+                alert('Lien copié dans le presse-papiers !');
+            }).catch(err => {
+                console.error('Erreur lors de la copie du lien :', err);
+                alert('Impossible de copier le lien.');
+            });
+        });
+    </script>
 </body>
-
-
-<!-- A SUIVRE : BOUTON TELECHARGEMENT DIRECT -->
-<script>
-
-document.getElementById('exportButton').addEventListener('click', function() {
-  // Demandez le pseudo de l'utilisateur
-  const userPseudo = window.prompt('Veuillez entrer le pseudo de votre choix :', 'MonPseudo');
-
-  if (userPseudo !== null) {
-    // Sélectionnez l'élément que vous souhaitez capturer
-    const captureContainer = document.body;
-
-    // Capturez l'élément avec dom-to-image
-    domtoimage.toBlob(captureContainer, { bgcolor: 'white' })
-      .then(function(blob) {
-        // Créez un objet FormData pour inclure l'image dans la requête POST
-        const formData = new FormData();
-        const fileName = `${userPseudo}-profil-kinky.png`; // Nom de fichier basé sur le pseudo
-        formData.append('image', blob, fileName);
-
-        // Créez un élément de lien pour télécharger l'image
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = fileName;
-
-        // Simulez un clic sur le lien pour déclencher le téléchargement
-        downloadLink.click();
-      })
-      .catch(function(error) {
-        console.error('Erreur lors de la capture de l\'image :', error);
-      });
-  }
-});
-
-
-
- </script>
-<!-- FIN : BOUTON TELECHARGEMENT DIRECT -->
 </html>
